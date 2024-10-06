@@ -20,7 +20,7 @@ function App() {
     };
     if (statusUsers == "1") {
       data.study = e.target.jobOrStudy.value;
-      fetch("http://localhost:4000/students", {
+      fetch("http://localhost:3000/students", {
         method: "POST",
         body: JSON.stringify(data),
         headers: {
@@ -31,7 +31,7 @@ function App() {
       });
     } else {
       data.job = e.target.jobOrStudy.value;
-      fetch("http://localhost:4000/teachers", {
+      fetch("http://localhost:3000/teachers", {
         method: "POST",
         body: JSON.stringify(data),
         headers: {
@@ -45,13 +45,13 @@ function App() {
   }
 
   useEffect(() => {
-    fetch("http://localhost:4000/students")
+    fetch("http://localhost:3000/students")
       .then((res) => res.json())
       .then((data) => setStudents(data));
   }, [refreshStudent]);
 
   useEffect(() => {
-    fetch("http://localhost:4000/teachers")
+    fetch("http://localhost:3000/teachers")
       .then((res) => res.json())
       .then((data) => setTeachers(data));
   }, [refreshTeachers]);
@@ -104,12 +104,12 @@ function App() {
       <div className="flex justify-center gap-20 p-10">
         <ul className="bg-slate-400 p-5 rounded-md space-y-4">
           {students.map((item) => (
-            <Item key={item.id} item={item}  />
+            <Item key={item.id} item={item} refreshTeachers={refreshTeachers} setRefreshTeachers={setRefreshTeachers} refreshStudent={refreshStudent} setRefreshStudent={setRefreshStudent}  />
           ))}
         </ul>
         <ul className="bg-slate-400 p-5 rounded-md space-y-4">
           {teachers.map((item) => (
-            <Item key={item.id} item={item} />
+            <Item key={item.id} item={item} refreshStudent={refreshStudent} setRefreshStudent={setRefreshStudent} refreshTeachers={refreshTeachers} setRefreshTeachers={setRefreshTeachers} />
           ))}
         </ul>
       </div>
@@ -118,5 +118,3 @@ function App() {
 }
 
 export default App;
-// refreshStudent={refreshStudent} setRefreshStudent={setRefreshStudent} refreshTeachers={refreshTeachers} setRefreshTeachers={setRefreshTeachers}
-// refreshStudent={refreshStudent} setRefreshStudent={setRefreshStudent} refreshTeachers={refreshTeachers} setRefreshTeachers={setRefreshTeachers}
