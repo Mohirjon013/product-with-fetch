@@ -1,0 +1,60 @@
+{
+  "students": [
+    {
+      "id": "1",
+      "name": "komiljon",
+      "surname": "Shodiyev",
+      "study": "Najot Ta'lim"
+    },
+    {
+      "id": "2",
+      "name": "Mohirjon",
+      "surname": "To'ychiboyev",
+      "study": "Turin"
+    },
+    {
+      "id": "12be",
+      "name": "mohirjon",
+      "surname": "toychiboyev",
+      "study": "learing"
+    },
+    {
+      "id": "2463",
+      "name": "fr",
+      "surname": "fr",
+      "study": "fr"
+    }
+  ],
+  "teachers": [
+    {
+      "id": "1",
+      "name": "Nurillo",
+      "surname": "Suyunboyev",
+      "job": "Teacher"
+    },
+    {
+      "id": "56e9",
+      "name": "s",
+      "surname": "s",
+      "job": "salom"
+    },
+    {
+      "id": "3dc3",
+      "name": "s",
+      "surname": "s",
+      "job": "salom"
+    },
+    {
+      "id": "32fc",
+      "name": "s",
+      "surname": "s",
+      "job": "salom"
+    },
+    {
+      "id": "c44b",
+      "name": "shaxbos",
+      "surname": "og'ayni",
+      "job": "logistics"
+    }
+  ]
+}
