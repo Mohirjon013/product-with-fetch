@@ -104,12 +104,12 @@ function App() {
       <div className="flex justify-center gap-20 p-10">
         <ul className="bg-slate-400 p-5 rounded-md space-y-4">
           {students.map((item) => (
-            <Item key={item.id} item={item} refreshStudent={refreshStudent} setRefreshStudent={setRefreshStudent} refreshTeachers={refreshTeachers} setRefreshTeachers={setRefreshTeachers} />
+            <Item key={item.id} item={item}  />
           ))}
         </ul>
         <ul className="bg-slate-400 p-5 rounded-md space-y-4">
           {teachers.map((item) => (
-            <Item key={item.id} item={item} refreshStudent={refreshStudent} setRefreshStudent={setRefreshStudent} refreshTeachers={refreshTeachers} setRefreshTeachers={setRefreshTeachers}/>
+            <Item key={item.id} item={item} />
           ))}
         </ul>
       </div>
@@ -118,3 +118,5 @@ function App() {
 }
 
 export default App;
+// refreshStudent={refreshStudent} setRefreshStudent={setRefreshStudent} refreshTeachers={refreshTeachers} setRefreshTeachers={setRefreshTeachers}
+// refreshStudent={refreshStudent} setRefreshStudent={setRefreshStudent} refreshTeachers={refreshTeachers} setRefreshTeachers={setRefreshTeachers}

@@ -2,19 +2,19 @@ import React from 'react';
 import { DeleteOutlined, EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
 import { Avatar, Card } from 'antd';
 const { Meta } = Card;
-const Item = ({item, refreshStudent, setRefreshStudent , refreshTeachers, setRefreshTeachers}) => {
-    function handleDeleteUser(user){
-        if(user.job){
-            fetch(`http://localhost:4000/teachers/${user.id}`, {method:"DELETE",}).then(res => {
-                setRefreshTeachers(!refreshTeachers)
-            })
-        }
-        else{
-            fetch(`http://localhost:4000/students/${user.id}`, {method:"DELETE",}).then(res => {
-                setRefreshStudent(!refreshStudent)
-            })
-        }
-    }
+const Item = ({item}) => {
+    // function handleDeleteUser(user){
+    //     if(user.job){
+    //         fetch(`http://localhost:4000/teachers/${user.id}`, {method:"DELETE",}).then(res => {
+    //             setRefreshTeachers(!refreshTeachers)
+    //         })
+    //     }
+    //     else{
+    //         fetch(`http://localhost:4000/students/${user.id}`, {method:"DELETE",}).then(res => {
+    //             setRefreshStudent(!refreshStudent)
+    //         })
+    //     }
+    // }
     
     return (
       <Card
@@ -24,7 +24,7 @@ const Item = ({item, refreshStudent, setRefreshStudent , refreshTeachers, setRef
         actions={[
           <SettingOutlined key="setting" />,
           <EditOutlined key="edit" />,
-          <DeleteOutlined onClick={() => handleDeleteUser(item)} key="edit" />
+          <DeleteOutlined  key="edit" />
         ]}
       >
         <Meta
@@ -36,3 +36,4 @@ const Item = ({item, refreshStudent, setRefreshStudent , refreshTeachers, setRef
     )
 }
 export default Item;
+// onClick={() => handleDeleteUser(item)}
